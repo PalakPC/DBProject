@@ -40,3 +40,6 @@ app.use(express.static(__dirname + '/public'));
 app.get('/login_page', function(req, res){
 		res.render('login_page.html');
 		});
+app.get('/', function(req, res){
+		res.render('login_page.html');
+		});
