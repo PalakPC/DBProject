@@ -60,6 +60,9 @@ app.get('/', function(req, res){
 				if(c==0){
 					console.log("denied");//would route back to login page with error msg.
 				}
+				else{
+					res.render('welcome.html');
+				}
 			});
 		});
 	});
