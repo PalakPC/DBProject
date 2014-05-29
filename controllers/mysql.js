@@ -53,7 +53,7 @@ var MysqlController = {
 	},
 
 	logout: function(req, res){
-		req.session.destroy();
+//		req.session.destroy();
 		res.status(302).redirect("/login");
 	},
 
@@ -72,7 +72,7 @@ var MysqlController = {
 				throw err;
 			}
 			result = JSON.stringify(rows);
-			console.log(result);
+//			console.log(result);
 			if(!result){
 				res.redirect('/login');
 			}

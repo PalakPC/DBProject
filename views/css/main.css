@@ -71,6 +71,21 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 	padding: 0 20px 0 20px;
 }
 
+#icons {
+	float: center;
+	margin: 15px 0 0 15px;
+	text-align: center;
+}
+
+#icons h1 {
+	margin: 0;
+	padding: 2px 0 0 0;
+	font-size:5px;
+	color: white;
+	text-align: center;
+	/*font-family: Tahoma, Geneva, sans-serif;*/
+}
+
 
 #logout-button{
 //	float: center;
@@ -82,6 +97,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 	padding: 20px 15px 50px 50px;
 	//    margin-top: 1.5%;
 }
+
+#logout-buttonh{
+	float: right;
+	padding: 27px 15px 0 0;
+	//    margin-top: 1.5%;
+}
+
 
 
 /* NAV BAR */

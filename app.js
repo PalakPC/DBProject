@@ -13,7 +13,7 @@ app.get('/', function(req, res){
 });
 
 app.get("/login", MysqlController.loginPage);
-app.get("/home", MysqlController.helper.authenticate, MysqlController.home);
+app.get("/home", /*MysqlController.helper.authenticate,*/ MysqlController.home);
 
 app.post("/login", MysqlController.login);
 app.post("/logout", MysqlController.logout);
