@@ -6,7 +6,11 @@
 		"express": "*",
 		"mysql": "*",
 		"ejs": "*",
+		"underscore": "*",
+		"bcrypt-nodejs": "*",
 		"url": "*",
-		"util": "*"
+		"util": "*",
+		"path": "*",
+		"querystring": "*"
 	}
 }
