@@ -1,4 +1,4 @@
 DBProject
 =========
 
-A project on Food Pantry Management System
+A project on Food Pantry Information Management System.

@@ -1,68 +1,54 @@
 <!doctype html>
 <html lang="en-US">
-
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Login</title>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round">
-		<link rel="stylesheet" href="css/main.css">
+          <title>Login</title>
+          <link rel="stylesheet" href="css/main1.css">
 		<link rel="stylesheet" href="css/register.css">
 		<link rel="stylesheet" href="./css/bootstrap.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<!--		<link type="text/css" rel="stylesheet" href="./css/layout-default-latest.css">-->
-		<script src="./scripts/jquery-1.8.2.js"></script>
 	</head>
 
 	<body onload="form1.reset()">
 		<div id="header">
-			<div id="headercenter">
-				<div id="logo">
-					<img src="images/food.jpg" width="80px" height="60px" alt="Food Pantry" /><br/>
-					<h1>Food Pantry</h1>
-				</div>
-				<div id="logout-button">FOOD PANTRY INFORMATION MANAGEMENT SYSTEM</div>
+			<div id="logo">
+				<img src="images/food.jpg" width="80px" height="60px" alt="Food Pantry"/><br/>
+				<h1>Food Pantry</h1>
 			</div>
+			<div id="logout-button">FOOD PANTRY INFORMATION MANAGEMENT SYSTEM</div>
 		</div>
-		<div id="login">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 col-md-offset-7" style="margin-left:35%">
-						<div class="panel panel-default">
-							<div class="panel-heading"><span class="glyphicon glyphicon-lock"></span> Login</div>
+          <div class="container">
+			<div class="row">
+				<div class="col-md-4 col-md-offset-7" style="margin-left:35%">
+					<div class="panel panel-default">
+						<div class="panel-heading"><span class="glyphicon glyphicon-lock"></span> Login</div>
+						<div class="panel-body">	
 							<form id="form1" class="form-horizontal" role="form" method="POST" action="/login">
-								<div class="panel-body">
-									<div class="form-group">
-										<label for="inputUsername" class="col-sm-3 control-label">Username </label>
-										<div class="col-sm-9"><input name="username" type="text" class="form-control" id="inputUsername" placeholder="Username" required></div>
-									</div>
-									<div class="form-group">
-										<label for="inputPassword3" class="col-sm-3 control-label">Password</label>
-										<div class="col-sm-9"><input name="password" type="password" class="form-control" id="inputPassword3" placeholder="Password" required></div>
-									</div>
-									<div class="form-group">
-										<div class="col-sm-offset-3 col-sm-9">
-											<div class="checkbox">
-												<label><input type="checkbox"/>Remember me</label>
-											</div>
+								<div class="form-group">
+									<label for="inputUsername" class="col-sm-3 control-label">Username  </label>
+									<div class="col-sm-9"><input name="username" type="text" class="form-control" id="inputUsername" placeholder="Username" required></div>
+								</div>
+								<div class="form-group">
+									<label for="inputPassword3" class="col-sm-3 control-label">Password </label>
+									<div class="col-sm-9"><input name="password" type="password" class="form-control" id="inputPassword3" placeholder="Password" required></div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-3 col-sm-9">
+										<div class="checkbox">
+											<label><input type="checkbox"/>Remember me</label>
 										</div>
 									</div>
 								</div>
-								<div class="panel-footer">
-									<div class="form-group last">
-										<div class="col-sm-offset-3 col-sm-9">
-											<button type="submit" class="btn btn-success btn-sm">Sign in</button>
-											<button type="reset" class="btn btn-default btn-sm">Reset</button>
-										</div>
+								<div class="form-group last">
+									<div class="col-sm-offset-3 col-sm-9">
+										<button type="submit" class="btn btn-success btn-sm">Sign in</button>
+										<button type="reset" class="btn btn-default btn-sm">Reset</button>
 									</div>
-								</form>
-							</div>
+								</div>
+							</form>
 						</div>
+						<div class="panel-footer">Not Registered? <a href="/register">Register here</a></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- end login -->
-		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 	</body>
 </html>

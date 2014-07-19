@@ -1,74 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Home</title>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round">
 		<link rel="stylesheet" href="./css/main.css">
 		<link rel="stylesheet" href="./css/bootstrap.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="scripts/logout.js"></script>
-		<script src="scripts/operations.js"></script>
-<!--	    	<link type="text/css" rel="stylesheet" href="./css/layout-default-latest.css">-->
 		<script src="./scripts/jquery-1.8.2.js"></script>
 	</head>
 	<body>
 		<div id="header">
-        		<div id="headercenter">
-				<div id="logo">
-					<a href="home.html">
-						<img src="images/food.jpg" width="80px" height="60px" alt="Home" /><br/>
-						<h1>Food Pantry</h1>
-					</a>
-				</div>
-				<div id="logout-buttonh"> 
-			    		<a id="logout_link" href="#"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
-				</div>
-		        </div>
+		     <div id="logo">
+		    		<a href="home.html">
+					<img src="images/food.jpg" width="80px" height="60px" alt="Home" /><br/>
+					<h1>Food Pantry</h1>
+				</a>
+			</div>
+               <div id="logout-button">FOOD PANTRY INFORMATION MANAGEMENT SYSTEM</div>
+			<div id="logout-buttonh"> 
+	               <a id="logout_link" href="#"><button type="button" class="btn btn-primary btn-lg">Logout</button></a>
+			</div>
 	    	</div>
-		<br>
+		<br><br><br>
 		<div id="table">
 			<table style="width: 100%">
 				<tr>
-					<td>
-						<a href="pickups.html">
-							<img src="images/pickups.jpg" width="150px" height="150px" alt="Pickups" /><br/>
-							<h1>Pickups</h1>
-						</a>
-					</td>
-					<td>
-						<a href="bags.html">
-							<img src="images/bags.png" width="150px" height="150px" alt="Bags" /><br/>
-							<h1>Bags</h1>
-						</a>
-					</td>
-					<td>
-						<a href="dropoff.html">
-							<img src="images/dropoff.png" width="150px" height="150px" alt="Dropoffs" /><br/>
-							<h1>Drop Offs</h1>
-						</a>
-					</td>
+					<td><div id="icons"><a href="/pickups">
+						<img src="images/pickups.jpg" width="150px" height="150px" alt="Pickups" /><br/>
+					     <h1>Pickups</h1>
+					</a></div></td>
+					<td><div id="icons"><a href="/bags">
+					     <img src="images/bags.png" width="150px" height="150px" alt="Bags" /><br/>
+						<h1>Bags</h1>
+				     </a></div></td>
+					<td><div id="icons"><a href="/dropoff">
+						<img src="images/dropoff.png" width="150px" height="150px" alt="Dropoffs" /><br/>
+						<h1>Drop Offs</h1>
+				     </a></div></td>
 				</tr>
 				<tr>
-					<td>
-						<a href="clients.html">
-							<img src="images/clients.png" width="150px" height="150px" alt="Clients" /><br/>
-							<h1>Clients</h1>
-						</a>
-					</td>
-					<td>
-						<a href="reports.html">
-							<img src="images/reports.png" width="150px" height="150px" alt="Service Reports" /><br/>
-							<h1>Service Reports</h1>
-						</a>
-					</td>
-					<td>	
-						<a href="products.html">
-							<img src="images/products.jpg" width="150px" height="150px" alt="Products" /><br/>
-							<h1>Products</h1>
-						</a>
-					</td>
+					<td><div id="icons"><a href="/clients">
+						<img src="images/clients.png" width="150px" height="150px" alt="Clients" /><br/>
+						<h1>Clients</h1>
+					</a></div></td>
+					<td><div id="icons"><a href="/reports">
+						<img src="images/reports.png" width="150px" height="150px" alt="Service Reports" /><br/>
+						<h1>Service Reports</h1>
+					</a></div></td>
+					<td><div id="icons"><a href="/products">
+						<img src="images/products.jpg" width="150px" height="150px" alt="Products" /><br/>
+						<h1>Products</h1>
+					</a></div></td>
 				</tr>
 			</table>
 		</div>
