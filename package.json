@@ -11,6 +11,7 @@
 		"url": "*",
 		"util": "*",
 		"path": "*",
-		"querystring": "*"
+		"querystring": "*",
+        "bcrypt": "*"
 	}
 }

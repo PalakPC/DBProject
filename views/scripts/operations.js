@@ -5,7 +5,7 @@ $(document).ready(function(){
 		var params = {
 			query: jQuery('#input_query_box').val()
 		};
-		$.getJSON("/inputQuery", params, function(result){
+		$.getJSON("/pickups", params, function(result){
 			jQuery('#query_result').val(result);
 		});
 	});
