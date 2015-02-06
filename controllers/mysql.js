@@ -29,22 +29,23 @@ var MysqlController = {
 	helper : {
 		authenticate : function(req, res, next) {
 			var isAuthenticated = false;
-			if (req.session.username)
+			if (req.session.username) {
 				isAuthenticated = true;
-
-			if (isAuthenticated)
+            }
+			if (isAuthenticated) {
 				next();
-
+            } 
 			else {
 				console.log("Authentication error");
 				res.send("Authentication error");
 				res.redirect('/login');
 			}
-		},
+		}, 
 
 		authenticateAdmin : function(req, res, next) {
 			var isAuthenticated = false;
-			if (req.session.username && req.session.isAdminFlag == true)
+			//console.log(req.session.isAdminFlag);
+            if (req.session.username && req.session.isAdminFlag === true)
 				isAuthenticated = true;
 			if (isAuthenticated)
 				next();
@@ -58,7 +59,7 @@ var MysqlController = {
 
 	loginPage : function(req, res) {
 		res.sendfile("login_page.html", {root: "./views/"});
-		req.session.lastPage = '/login';
+		//req.session.lastPage = '/login';
 	},
 
 	logout : function(req, res) {
@@ -99,7 +100,7 @@ var MysqlController = {
                     var test = '[{"isAdminFlag":1}]';
                     var type = JSON.stringify(row);
                     if (type != test) {
-                        res.session.isAdminFlag = false;
+                        req.session.isAdminFlag = false;
                         res.redirect('/home');
                     }
                     else {                   
@@ -112,17 +113,18 @@ var MysqlController = {
 	},
 
 	registerPage : function (req, res) {
-		req.sendfile ("register.html", {root: "./views/"});
+		res.sendfile ("register.html", {root: "./views/"});
 		req.session.lastPage = '/login';
 	},
 
 	register : function (req, res, next) {
 		var username = req.param ("username", "");
 		var password = req.param ("password", "");
-		var fname = req.param ("first_name", "");
-		var lname = req.param ("last_name", "");
+		var fname = req.param ("first", "");
+		var lname = req.param ("last", "");
 		var email = req.param ("email", "");
-		var isAdminFlag = req.param ("isAdminFlag", "");
+		var Flag = req.param ("isAdminFlag", "");
+        var isAdminFlag = 1;
 
 		if (username == 'Username') {
 			res.send ("Please input a valid username");
@@ -141,7 +143,7 @@ var MysqlController = {
 			if (err)
 				throw err;
 
-			if (result)
+			if (result != "")
 				res.send ("This username is already taken...");
 
 			else {
@@ -149,15 +151,17 @@ var MysqlController = {
 				if (err) 
 					throw err;
 
-				if (result)
+				if (result != "")
 					res.send ("This email id is already registered...");
 
 				else {
-					var post = {username: username, password: password, email: email, isAdminFlag: isAdminFlag};
+                    if (Flag != true)
+                        isAdminFlag = 0;
+					var post = {username: username, password: password, email: email, fname: fname, lname: lname, isAdminFlag: isAdminFlag};
 					connection.query ('insert into users set ?', post, function (err, result) { 
 						if (err)
 							throw err;
-					} );
+					});
 					res.send ("Thanks for registering...");
 				}
 			}
